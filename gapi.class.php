@@ -174,7 +174,7 @@ class gapi {
 
     if ($start_date==null) {
       // Use the day that Google Analytics was released (1 Jan 2005).
-      $start_date = '2005-01-01';
+      $start_date=date('Y-m-d',strtotime('1 month ago'));
     } elseif (is_int($start_date)) {
       // Perhaps we are receiving a Unix timestamp.
       $start_date = date('Y-m-d', $start_date);
